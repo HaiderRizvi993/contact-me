@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://haider:haider12@cluster0.guzv6.mongodb.net/connact-me?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrecttoken"
+}
