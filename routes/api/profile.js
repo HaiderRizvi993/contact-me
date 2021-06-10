@@ -6,11 +6,11 @@ const auth = require('../../middleware/auth');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
-
 //Check Router
 router.get('/', (req, res)=> {
   res.status(200).send('In Profile!!');
 })
+
 // @route    GET api/profile/me
 // @desc     Get current user profile
 // @access   Private
