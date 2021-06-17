@@ -1,5 +1,6 @@
 console.clear();
 const express = require('express');
+const chalk = require('chalk');
 
 const connectDB = require('./config/db');
 
@@ -14,9 +15,9 @@ const app = express();
 connectDB();
 
 //Middlewares
-app.use(express.json({extended : false}));
+app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.send('API is running!!!'))
+app.get('/', (req, res) => res.send('API is running!!!'));
 
 //Defined Routes
 app.use('/api/users', userRoute);
@@ -26,5 +27,5 @@ app.use('/api/auth', authRoute);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-  console.log('App listening on port 4000!');
+  console.log(chalk.yellow('App listening on port 4000!'));
 });
