@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
+const normalize = require('normalize-url');
 
 const auth = require('../../middleware/auth');
 const Profile = require('../../models/Profile');
